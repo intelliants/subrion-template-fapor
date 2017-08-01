@@ -1,0 +1,268 @@
+
+//
+// Footer blocks
+// --------------------------------------------------
+
+.footer-blocks {
+  background: #2b2f35;
+  padding: @sections-v-pad*2 0;
+  .footer_h1 {
+    color: #b5a263;
+    line-height: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+   p {
+    line-height: 20px;
+    color: #6e7279;
+  }
+  .about {
+    padding-right: 50px;
+  }
+  input {
+    display: block;
+    width: 100%;
+    margin: 12px 0;
+    line-height: 36px;
+  }
+  .button {
+    color: #fff;
+    text-transform: uppercase;
+    background: #b5a263;
+    border: 1px solid #b5a263;
+  }
+  input.text {
+    border: 1px solid #6e7279;
+    background: inherit;
+    padding: 0 5px 0;
+    color: #6e7279;
+  }
+
+  .box__caption {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .box__content {
+    color: fade(#fff, 70%);
+  }
+
+  .list-unstyled {
+    > li {
+      font-weight: bold;
+      padding-left: 30px;
+      position: relative;
+      color: #fff;
+      margin-bottom: 12px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      > .fa {
+        position: absolute;
+        left: 0;
+        top: 2px;
+        font-size: 18px;
+        width: 20px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+
+
+//
+// Footer
+// --------------------------------------------------
+
+.footer {
+  background: @footer-bg;
+  padding: 13px 0;
+}
+
+
+
+//
+// Footer navs
+// --------------------------------------------------
+
+.nav-footer {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  float: left;
+  .clearfix();
+
+  > li {
+    float: left;
+    margin: 0 10px 0 0;
+
+    > a {
+      &,
+      &:focus {
+        display: block;
+        line-height: @footer-height;
+        color: @footer-link-color;
+        font-size: 12px;
+        text-decoration: none;
+      }
+
+      &:hover {
+        text-decoration: underline;
+        color: #fff;
+        border-color: @brand-primary;
+      }
+    }
+
+    &.active > a,
+    &.active > a:focus,
+    &.active > a:hover {
+      color: @footer-link-active-color;
+    }
+  }
+
+  @media (max-width: @grid-float-breakpoint) {
+    float: none;
+
+    > li {
+
+      > a {
+        line-height: @line-height-computed;
+        font-size: 14px;
+      }
+    }
+  }
+}
+.nav-footer-social > li > a:hover {
+    color: #fff;
+    background: @brand-primary;
+    border-color: @brand-primary;
+  }
+
+
+//
+// Footer social nav
+// --------------------------------------------------
+
+.nav-footer-social {
+  float: right;
+  .clearfix();
+
+  > li {
+    margin: 0;
+
+    > a {
+      padding: 0;
+      color: @footer-social-link-color;
+      margin-left: 10px;
+      font-size: 16px;
+      display: inline-block;
+      border: 1px solid @footer-social-link-color;
+      border-radius: 50%;
+      line-height: 34px;
+      height: 34px;
+      width: 34px;
+      float: right;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: @grid-float-breakpoint) {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    float: none;
+
+    > li {
+      margin-right: 10px;
+
+      > a {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        background: lighten(@footer-bg, 10%);
+        padding: 0;
+        border-radius: 3px;
+      }
+    }
+  }
+}
+
+
+
+//
+// Footer text
+// --------------------------------------------------
+
+.copyright {
+  margin: 0;
+  line-height: 8px;
+  color: @footer-text-color;
+  float: right;
+
+  a {
+    &,
+    &:focus {
+      color: @footer-link-color;
+    }
+
+    &:hover {
+      color: @footer-link-hover-color;
+    }
+   > p {
+      display: inline-block;
+      margin: 0;
+    }
+  }
+
+  @media (max-width: @grid-float-breakpoint) {
+    float: none;
+  }
+}
+
+
+
+//
+// Back to top button
+// --------------------------------------------------
+
+.back-to-top {
+  position: fixed;
+  right: 30px;
+  bottom: 40px;
+  border: 0 none;
+  background: darken(@brand-dark, 3%);
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  font-size: 22px;
+  outline: 0 none;
+  padding: 0;
+  opacity: 0;
+  visibility: hidden;
+  .transition(all .15s ease-in-out);
+
+  &:focus {
+    outline: 0 none;
+  }
+
+  &:hover {
+    background: darken(@brand-dark, 1%);
+    margin-bottom: 3px;
+  }
+
+  &.on {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @media (max-width: @grid-float-breakpoint) {
+    bottom: 10px;
+    right: 10px;
+  }
+}

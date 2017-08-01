@@ -1,0 +1,679 @@
+btncommon_btn<?xml version="1.0" encoding="utf-8"?>
+<module type="template" name="fapor">
+    <title>Fapor</title>
+    <summary>Bootstrap 3 developer template</summary>
+    <author>Danil Neiaskin</author>
+    <contributor>Intelliants LLC</contributor>
+    <version>1.0.0</version>
+    <date>2017-08-01</date>
+    <compatibility>4.1.0</compatibility>
+
+    <layout>
+        <position menu="1" movable="0">account</position>
+        <position menu="1" movable="0">mainmenu</position>
+
+        <position>teaser</position>
+        <position>verytop</position>
+        <position>top</position>
+        <position>bottom</position>
+        <position>verybottom</position>
+        <position>copyright</position>
+        <position>landing</position>
+
+        <section name="content">
+            <position fixed="1">left</position>
+            <position width="6">center</position>
+            <position fixed="1">right</position>
+        </section>
+        <section name="footer-blocks">
+            <position width="3">footer1</position>
+            <position width="3">footer2</position>
+            <position width="3">footer3</position>
+            <position width="3">footer4</position>
+        </section>
+    </layout>
+
+    <configgroup name="template_fapor">Template</configgroup>
+
+    <config group="template_fapor"
+            type="divider"
+            order="3000">General</config>
+    <config group="template_fapor"
+            name="enable_landing"
+            type="radio"
+            order="3001"
+            values="1,0"
+            description="Enable landing page">1</config>
+    <config group="template_fapor"
+            name="custom_colors"
+            type="radio"
+            order="3002"
+            values="1,0"
+            description="Enable custom colors and backgrounds">0</config>
+    <config group="template_fapor"
+            name="custom_color_body_bg"
+            type="colorpicker"
+            order="3003"
+            description="Body background">#fff</config>
+    <config group="template_fapor"
+            name="custom_color_text"
+            type="colorpicker"
+            order="3004"
+            description="Text color">#333333</config>
+    <config group="template_fapor"
+            name="custom_color_headings"
+            type="colorpicker"
+            order="3005"
+            description="Headings color">#333333</config>
+    <config group="template_fapor"
+            name="custom_color_link"
+            type="colorpicker"
+            order="3006"
+            description="Link color">#38b7ea</config>
+    <config group="template_fapor"
+            name="custom_color_link_hover"
+            type="colorpicker"
+            order="3007"
+            description="Link hover color">#1490c1</config>
+
+    <config group="template_fapor"
+            type="divider"
+            order="3200">Navbar / Mainmenu</config>
+    <config group="template_fapor"
+            name="max_top_menu_items"
+            type="text"
+            description="Max number of items in Main Menu"
+            order="3201">6</config>
+    <config group="template_fapor"
+            name="enable_text_logo"
+            type="radio"
+            order="3202"
+            values="1,0"
+            description="Enable Logo text">0</config>
+    <config group="template_fapor"
+            name="logo_text"
+            type="text"
+            order="3203"
+            show="enable_text_logo|1"
+            description="Logo text">fapor</config>
+    <config group="template_fapor"
+            name="navbar_sticky"
+            type="radio"
+            order="3204"
+            values="1,0"
+            description="Sticky navbar">1</config>
+    <config group="template_fapor"
+            name="search_navbar"
+            type="radio"
+            order="3205"
+            values="1,0"
+            description="Show search in navbar">1</config>
+    <config group="template_fapor"
+            name="custom_color_navbar_bg"
+            type="colorpicker"
+            order="3206"
+            description="Background">#ffffff</config>
+    <config group="template_fapor"
+            name="custom_color_navbar_link"
+            type="colorpicker"
+            order="3207"
+            description="Link color">rgba(50,50,50,0.6)</config>
+    <config group="template_fapor"
+            name="custom_color_navbar_link_hover"
+            type="colorpicker"
+            order="3208"
+            description="Link hover color">rgba(50,50,50,0.8)</config>
+    <config group="template_fapor"
+            name="custom_color_navbar_link_active"
+            type="colorpicker"
+            order="3209"
+            description="Link active color">#38b7ea</config>
+
+    <config group="template_fapor"
+            type="divider"
+            order="3300">Header / Teaser</config>
+    <config group="template_fapor"
+            name="bg_header"
+            type="image"
+            description="Background image"
+            order="3301"><![CDATA[]]></config>
+    <config group="template_fapor"
+            name="bg_header_use_color"
+            type="radio"
+            values="1,0"
+            description="Use color instead image"
+            order="3302">0</config>
+    <config group="template_fapor"
+            name="bg_header_color"
+            type="colorpicker"
+            order="3303"
+            show="bg_header_use_color|1"
+            description="Background color">#6b3561</config>
+
+    <config group="template_fapor"
+            type="divider"
+            order="3350">Features section</config>
+    <config group="template_fapor"
+            name="bg_features"
+            type="image"
+            description="Background image"
+            order="3351"><![CDATA[]]></config>
+    <config group="template_fapor"
+            name="bg_features_use_color"
+            type="radio"
+            values="1,0"
+            description="Use color instead image"
+            order="3352">0</config>
+    <config group="template_fapor"
+            name="bg_features_color"
+            type="colorpicker"
+            order="3353"
+            show="bg_features_use_color|1"
+            description="Background color">#6b3561</config>
+
+    <config group="template_fapor"
+            type="divider"
+            order="3400">Footer</config>
+    <config group="template_fapor"
+            name="footer_bg"
+            type="colorpicker"
+            order="3401"
+            description="Background">#323232</config>
+    <config group="template_fapor"
+            name="footer_blocks_bg"
+            type="colorpicker"
+            order="3401"
+            description="Background of footer blocks">#444444</config>
+    <config group="template_fapor"
+            name="footer_link"
+            type="colorpicker"
+            order="3402"
+            description="Link color">rgba(255,255,255,0.45)</config>
+    <config group="template_fapor"
+            name="footer_link_hover"
+            type="colorpicker"
+            order="3403"
+            description="Link hover color">rgba(255,255,255,0.5)</config>
+    <config group="template_fapor"
+            name="footer_link_active"
+            type="colorpicker"
+            order="3404"
+            description="Link active color">rgba(255,255,255,0.7)</config>
+
+    <config group="template_fapor"
+            type="divider"
+            order="4000">Social links</config>
+    <config group="template_fapor"
+            name="website_social"
+            type="radio"
+            order="4001"
+            values="1,0"
+            description="Show links">1</config>
+    <config group="template_fapor"
+            name="website_social_t"
+            type="text"
+            order="4002"
+            show="website_social|1"
+            description="Twitter Link">https://twitter.com/IntelliantsLLC</config>
+    <config group="template_fapor"
+            name="website_social_f"
+            type="text"
+            order="4003"
+            show="website_social|1"
+            description="Facebook Link">https://www.facebook.com/Intelliants</config>
+    <config group="template_fapor"
+            name="website_social_g"
+            type="text"
+            order="4004"
+            show="website_social|1"
+            description="Google+ Link">https://plus.google.com/102500660503219569194/posts</config>
+    <config group="template_fapor"
+            name="website_social_i"
+            type="text"
+            order="4005"
+            show="website_social|1"
+            description="LinkedIn Link">#</config>
+
+    <config group="template_fapor"
+            name="ckeditor_css"
+            type="hidden"
+            description="CKEditor CSS"
+            order="5000">ckeditor.css</config>
+
+    <changeset>
+        <menu position="account" status="active">account</menu>
+
+        <block status="active" classname="section section-portfolio" position="landing" order="203">new_portfolio_entries</block>
+        <block status="active" classname="section section-slider-bottom" sticky="0" pages="index" title="What our clients say" header="0" collapsible="0" position="landing" order="208">testimonials</block>
+        <block status="active" classname="section section-blog" position="landing" order="202">blogroll</block>
+        <block status="active" position="footer3" collapsible="0" sticky="1" header="1" title="SUBSCRIBE TO OUR NEWSLETTER">newsletters_subscription</block>
+        <block status="active" classname="box--border" position="right">common_statistics</block>
+        <block status="active" classname="box--border" position="left">filters</block>
+    </changeset>
+
+    <blocks>
+        <block name="header"
+               title="Teaser block"
+               position="teaser"
+               header="0"
+               collapsible="0"
+               sticky="0"
+               pages="index"
+               status="active"
+               type="smarty">
+            <![CDATA[
+<div class="slider">
+    <div>
+        <img src="{$img}slider_bg.jpg" alt="FAPOR">
+        <div class="shadow">
+            <div class="textarea">
+                <p>We create Amazing Things</p>
+                <h1>Wellcome to FAPOR1</h1>
+                <a href="#" class="slider_btn btn btn_index common_btn">{lang key='slider_btn'}</a>
+            </div>
+        </div>
+    </div>
+    <div>
+        <img src="{$img}slider_bg.jpg" alt="FAPOR">
+        <div class="shadow">
+            <div class="textarea">
+                <p>We create Amazing Things</p>
+                <h1>Wellcome to FAPOR2</h1>
+                <a href="#" class="slider_btn btn btn_index common_btn">{lang key='slider_btn'}</a>
+            </div>
+        </div>
+    </div>
+    <div>
+        <img src="{$img}slider_bg.jpg" alt="FAPOR">
+        <div class="shadow">
+            <div class="textarea">
+                <p>We create Amazing Things</p>
+                <h1>Wellcome to FAPOR3</h1>
+                <a href="#" class="slider_btn btn btn_index common_btn">{lang key='slider_btn'}</a>
+            </div>
+        </div>
+    </div>
+    <div>
+        <img src="{$img}slider_bg.jpg" alt="FAPOR">
+        <div class="shadow">
+            <div class="textarea">
+                <p>We create Amazing Things</p>
+                <h1>Wellcome to FAPOR4</h1>
+                <a href="#" class="slider_btn btn btn_index common_btn">{lang key='slider_btn'}</a>
+            </div>
+        </div>
+    </div>
+</div>
+            ]]>
+        </block>
+        <block name="landing_business"
+               title="We will help manage your Business"
+               position="landing"
+               header="1"
+               collapsible="0"
+               sticky="0"
+               pages="index"
+               status="active"
+               type="smarty"
+               classname="section section-what"
+               order="200">
+            <![CDATA[
+<div class="business">
+    <p>We are a fairly small, flexible design studio that designs for print and web. We work flexibly with clients to fulfil their design needs. Whether you need to create a brand from scratch, including marketing materials and a beautiful.</p>
+    <div class="business_about">
+        <div class="business_about_box box1 col-md-4">
+            <h6>RETINA READY</h6>
+            <p>Whether you need to create a brand from scratch, including marketing materials and a beautiful and functional.</p>
+        </div>
+        <div class="business_about_box box2 col-md-4">
+            <h6>User friendly</h6>
+            <p> Website or whether you are looking for a design refresh we are confident you will be pleased with the results.</p>
+        </div>
+        <div class="business_about_box box3 col-md-4">
+            <h6>Customixible</h6>
+            <p>Whether you need to create a brand from scratch, including marketing materials and a beautiful and functional.</p>
+        </div>
+    </div>
+</div>
+            ]]>
+        </block>
+        <block name="landing_about_us"
+               title="Features"
+               position="landing"
+               header="0"
+               collapsible="0"
+               sticky="0"
+               pages="index"
+               status="active"
+               type="smarty"
+               classname="section section-features"
+               order="201">
+            <![CDATA[
+    <div class="about_us_box_wrap">
+        <div class="about_us_box1 col-md-6"><img src="{$img}us.jpg" alt="us"></div>
+        <div class="about_us_box2 col-md-6">
+            <h5 class="block">Who WE ARE</h5>
+            <p>We are a fairly small, flexible design studio that designs for print and web. We work flexibly with clients to fulfil their design needs. Whether you need to create a brand from scratch.</p>
+            <a href="#" class="btn btn_index common_btn buttons">Learn MoRe</a>
+        </div>
+    </div>
+            ]]>
+        </block>
+        <block name="landing_work"
+               title="Ready for mobile devices"
+               position="landing"
+               header="0"
+               collapsible="0"
+               sticky="0"
+               pages="index"
+               status="active"
+               type="smarty"
+               classname="section section-mobile"
+               order="203">
+            <![CDATA[
+            	<div class="work_box_wrap">
+            		<div class="work_box1 col-md-4"><img src="{$img}monitor.png" alt="us"></div>
+            		<div class="work_box2 col-md-8">
+            			<h5 class="block">How we work</h5>
+            			<p>We are a fairly small, flexible design studio that designs for print and web.
+            				We work flexibly with clients to fulfil their design needs. Whether you need to create a brand from scratch.</p>
+                  <p>We are a fairly small, flexible design studio that designs for print and web.
+              			We work flexibly with clients to fulfil their design needs. Whether you need to create a brand from scratch.</p>
+                  <p>We are a fairly small, flexible design studio that designs for print and web.
+              			We work flexibly with clients to fulfil their design needs. Whether you need to create a brand from scratch.</p>
+            			</div>
+            		</div>
+            ]]>
+        </block>
+        <block name="landing_stat"
+               title="Stats"
+               position="landing"
+               header="0"
+               collapsible="0"
+               sticky="0"
+               pages="index"
+               status="active"
+               type="html"
+               classname="section section-stat"
+               order="205">
+            <![CDATA[
+          		<div class="container">
+          			<div class="stat_box col-md-4">
+          				<div class="stat_h1">150</div>
+          				<div class="stat_h2">Clients</div>
+          				<span class="underline"></span>
+          				<p>Whether you need to create a brand from scratch, including marketing materials and a beautiful and functional.</p>
+          			</div>
+          			<div class="stat_box col-md-4">
+          				<div class="stat_h1">550</div>
+          				<div class="stat_h2">Projects Done</div>
+          				<span class="underline"></span>
+          				<p> Website or whether you are looking for a design refresh we are confident you will be pleased with the results.</p>
+          			</div>
+          			<div class="stat_box col-md-4">
+          				<div class="stat_h1">7640</div>
+          				<div class="stat_h2">hours of work</div>
+          				<span class="underline"></span>
+          				<p>Whether you need to create a brand from scratch, including marketing materials and a beautiful and functional.</p>
+          			</div>
+          		</div>
+            ]]>
+        </block>
+        <block name="landing_team"
+               title="Team"
+               position="landing"
+               header="0"
+               collapsible="0"
+               sticky="0"
+               pages="index"
+               status="active"
+               type="smarty"
+               classname="section section-team"
+               order="206">
+            <![CDATA[
+		<div class="container">
+			<h5 class="block">Meet our team</h5>
+			<span class="underline"></span>
+			<div class="team_wrap">
+				<div class="team_box col-md-6">
+					<div class="team_img"><img src="{$img}team_pic1.png" alt=""></div>
+					<div class="team_txt">
+						<div class="team_h1">Joshep WILLIAM</div>
+						<p>Creative Director</p>
+						<p> Website or whether you are looking for a design refresh we are confident you will be pleased.</p>
+						<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+						<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+						<a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+					</div>
+				</div>
+				<div class="team_box col-md-6">
+					<div class="team_img"><img src="{$img}team_pic2.png" alt=""></div>
+					<div class="team_txt">
+						<div class="team_h1">Liam Aiken</div>
+						<p>Web Developer</p>
+						<p>Website or whether you are looking for a design refresh we are confident you will be pleased.</p>
+						<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+						<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+						<a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+					</div>
+				</div>
+				<div class="team_box col-md-6">
+					<div class="team_img"><img src="{$img}team_pic3.png" alt=""></div>
+					<div class="team_txt">
+						<div class="team_h1">Franklyn Ajaye</div>
+						<p>UX/Ui Designer</p>
+						<p> Website or whether you are looking for a design refresh we are confident you will be pleased.</p>
+						<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+						<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+						<a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+					</div>
+				</div>
+				<div class="team_box col-md-6">
+					<div class="team_img"><img src="{$img}team_pic4.png" alt=""></div>
+					<div class="team_txt">
+						<div class="team_h1">Devon Alan</div>
+						<p>Marketing</p>
+						<p>Website or whether you are looking for a design refresh we are confident you will be pleased.</p>
+						<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+						<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+						<a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+            ]]>
+        </block>
+        <block name="landing_features"
+               title="Our FEATURES"
+               position="landing"
+               header="1"
+               collapsible="0"
+               sticky="0"
+               pages="index"
+               status="active"
+               type="smarty"
+               classname="section section-featur"
+               order="207">
+            <![CDATA[
+            <div class="features">
+          		<div class="container">
+          			<div class="features_wrap">
+          				<div class="features_box col-md-6">
+          					<div class="features_img features_pic1"></div>
+          					<div class="features_txt">
+          						<p>Whether you need to create a brand from scratch, including marketing materials and a beautiful and functional.</p>
+          					</div>
+          				</div>
+          				<div class="features_box col-md-6">
+          					<div class="features_img features_pic2"></div>
+          					<div class="features_txt">
+          						<p>Website or whether you are looking for a design refresh we are confident you will be pleased with the results.</p>
+          					</div>
+          				</div>
+          				<div class="features_box col-md-6">
+          					<div class="features_img features_pic3"></div>
+          					<div class="features_txt">
+          						<p>Website or whether you are looking for a design refresh we are confident you will be pleased with the results.</p>
+          					</div>
+          				</div>
+          				<div class="features_box col-md-6">
+          					<div class="features_img features_pic4"></div>
+          					<div class="features_txt">
+          						<p>Whether you need to create a brand from scratch, including marketing materials and a beautiful and functional.</p>
+          					</div>
+          				</div>
+          				<div class="features_box col-md-6">
+          					<div class="features_img features_pic5"></div>
+          					<div class="features_txt">
+          						<p>Whether you need to create a brand from scratch, including marketing materials and a beautiful and functional.</p>
+          					</div>
+          				</div>
+          				<div class="features_box col-md-6">
+          					<div class="features_img features_pic6"></div>
+          					<div class="features_txt">
+          						<p>Website or whether you are looking for a design refresh we are confident you will be pleased with the results.</p>
+          					</div>
+          				</div>
+          				<div class="features_box col-md-6">
+          					<div class="features_img features_pic7"></div>
+          					<div class="features_txt">
+          						<p>Website or whether you are looking for a design refresh we are confident you will be pleased with the results.</p>
+          					</div>
+          				</div>
+          				<div class="features_box col-md-6">
+          					<div class="features_img features_pic8"></div>
+          					<div class="features_txt">
+          						<p>Whether you need to create a brand from scratch, including marketing materials and a beautiful and functional.</p>
+          					</div>
+          				</div>
+          			</div>
+          		</div>
+          		<a href="#" class="btn btn_index common_btn buttons">Learn more</a>
+          	</div>
+            ]]>
+        </block>
+        <block name="landing_clients"
+               title="Clients"
+               position="landing"
+               header="0"
+               collapsible="0"
+               sticky="0"
+               pages="index"
+               status="active"
+               type="smarty"
+               classname="section section-clients"
+               order="209">
+            <![CDATA[
+<div class="clients">
+  <div class="container">
+    <div class="clients_wrap">
+      <div class="clients_img_wrap"><img src="{$img}label1.png" alt=""></div>
+      <div class="clients_img_wrap"><img src="{$img}label2.png" alt=""></div>
+      <div class="clients_img_wrap"><img src="{$img}label3.png" alt=""></div>
+      <div class="clients_img_wrap"><img src="{$img}label4.png" alt=""></div>
+      <div class="clients_img_wrap"><img src="{$img}label5.png" alt=""></div>
+    </div>
+  </div>
+</div>
+            ]]>
+        </block>
+        <block name="top"{lang key='slider_btn'}
+               title="Top block position"
+               position="top"
+               header="1"
+               collapsible="1"
+               sticky="0"
+               pages="index"
+               status="inactive"
+               type="html">
+            <![CDATA[
+<p>You can change this block in admin panel. Remember, if you change template, this block will be lost. We advise you to clone this block.</p>
+<p>Ne lorem percipit efficiantur mei, ius ut simul vidisse. An vel probatus explicari appellantur. Has et comprehensam interpretaris, quo no inimicus maluisset temporibus. Ea mea quod incorrupte, brute laoreet at pri, eam antiopam honestatis efficiantur ea. Velit atomorum voluptaria ad nam, hinc aperiam accumsan ne est, ut dictas dissentias his.</p>
+            ]]>
+        </block>
+        <block name="bottom_block"
+               title="Bottom block position"
+               position="bottom"
+               header="1"
+               collapsible="1"
+               sticky="0"
+               pages="index"
+               status="inactive"
+               type="html">
+            <![CDATA[
+<p>You can change this block in admin panel. Remember, if you change template, this block will be lost. We advise you to clone this block.</p>
+<p>Ne lorem percipit efficiantur mei, ius ut simul vidisse. An vel probatus explicari appellantur. Has et comprehensam interpretaris, quo no inimicus maluisset temporibus. Ea mea quod incorrupte, brute laoreet at pri, eam antiopam honestatis efficiantur ea. Velit atomorum voluptaria ad nam, hinc aperiam accumsan ne est, ut dictas dissentias his.</p>
+            ]]>
+        </block>
+
+        <block name="html_block1"
+               title="HTML block #1"
+               position="left"
+               header="1"
+               collapsible="1"
+               sticky="1"
+               order="99"
+               status="inactive"
+               type="html"
+               classname="box--border">
+            <![CDATA[
+<p>You can change this block in admin panel. Remember, if you change template, this block will be lost. We advise you to clone this block.</p>
+<p>Ne lorem percipit efficiantur mei, ius ut simul vidisse. An vel probatus explicari appellantur. Has et comprehensam interpretaris, quo no inimicus maluisset temporibus. Ea mea quod.</p>
+            ]]>
+        </block>
+        <block name="footer1"
+               title="About CMS"
+               position="footer1"
+               header="0"
+               collapsible="0"
+               sticky="1"
+               status="active"
+               type="html">
+            <![CDATA[
+            			<div class="about">
+            				<div class="footer_h1">ABOUT FAPOR</div>
+            				<p>We are a fairly small, flexible design studio that designs for print and web. We work flexibly with clients to fulfil their design needs. Whether you need to create a brand from scratch, including marketing materials and a beautiful.</p>
+            			</div>
+            ]]>
+        </block>
+        <block name="footer2"
+               title="For users"
+               position="footer2"
+               header="0"
+               collapsible="0"
+               sticky="1"
+               status="active"
+               type="html">
+            <![CDATA[
+            <div class="contact">
+              <div class="footer_h1">Contact INFO</div>
+              <p>PO Box 17122 Nollins Street<br>
+              5034 Los Angelos<br><br>
+              Phone: 1800555.0658<br>
+              Email: support@fapor.com<br>
+              Web: fapor.com</p>
+            </div>
+            ]]>
+        </block>
+        <block name="footer4"
+               title="For designers"
+               position="footer4"
+               header="1"
+               collapsible="0"
+               sticky="1"
+               status="inactive"
+               type="html">
+            <![CDATA[
+<p>Simple templating engine and styles allows you to create any template you wish with just a few lines of code.</p>
+            ]]>
+        </block>
+    </blocks>
+
+    <phrases>
+        <phrase category="frontend" key="login">Log in</phrase>
+        <phrase category="frontend" key="register">Sign up</phrase>
+        <phrase category="frontend" key="back_to_top">Back to top</phrase>
+        <phrase category="frontend" key="slider_btn">Learn more</phrase>
+        <phrase category="frontend" key="admin_dashboard">Admin Dashboard</phrase>
+    </phrases>
+</module>
